@@ -32,3 +32,4 @@ Thumbs.db
 
 #other
 *.egg-info/
+docs/
