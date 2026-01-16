@@ -1,7 +1,6 @@
-import os
-from dotenv import load_dotenv
+from config import PATH_TO_DATABASE
 
-import test_retriever as retriever
+import test.test_client as retriever
 
 import polars as pl
 
@@ -18,10 +17,8 @@ print(df)
 
 #download table
 
-load_dotenv()
-path_to_database = os.getenv("PATH_TO_DATABASE")
 
-final_path = path_to_database + "/products.parquet"
+final_path = PATH_TO_DATABASE + "/products.parquet"
 
 df.write_parquet(final_path)
 
