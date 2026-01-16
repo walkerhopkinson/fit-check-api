@@ -18,8 +18,11 @@ print(df)
 #download table
 
 
-final_path = PATH_TO_DATABASE + "/products.parquet"
+parquet_path = PATH_TO_DATABASE + "/products.parquet"
+csv_path = PATH_TO_DATABASE + "/products.csv"
 
-df.write_parquet(final_path)
+df.write_parquet(parquet_path)
+#df.write_csv(csv_path)
 
-print("Products saved to: " + final_path)
+print("Products saved to: " + parquet_path)
+print("Products saved to: " + csv_path)
