@@ -1,8 +1,14 @@
-import requests
+import test_retriver as retriever
+
+import polars as pl
 
 
-url = "https://fakestoreapi.com/products"
-response = requests.get(url)
-products = response.json()
+# Fetch the products
+products = retriever.fetch_products()
 
-print(products)
+
+#Convert to nice table
+df = pl.DataFrame(products)
+
+
+print(df)
