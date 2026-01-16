@@ -1,0 +1,30 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# --- Virtual Environments ---
+# uv uses .venv by default
+.venv/
+venv/
+env/
+
+# --- uv Specific ---
+# This ignores the cached files uv creates to speed up installs
+.uv/
+
+# --- Environment / Secrets ---
+# NEVER commit your API keys or .env files to GitHub
+.env
+.env.local
+.env.*
+secrets.json
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- IDEs ---
+.vscode/
+.idea/
