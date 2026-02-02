@@ -31,3 +31,9 @@ class ExampleDao:
     def overwrite_parquet_file(self, df: pl.DataFrame):
         df.write_parquet(self.path_to_parquet)
         print("Overwritten at " + self.path_to_parquet)
+
+
+    def overwrite_csv_file_with_df_and_name(self, df: pl.DataFrame, file_name: str):
+        path_to_file = self.path_to_folder + "/" + file_name + ".csv"
+        df.write_csv(path_to_file)
+        print("Overwritten at " + path_to_file)
